@@ -87,8 +87,6 @@ export class ContactComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       console.log('Form data:', this.contactForm.value);
-      // Since this is a fictional form, we are just logging the data.
-      // In a real application, here is where you would send the data to your backend.
     }
   }
 }

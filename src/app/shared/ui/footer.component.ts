@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -58,6 +59,6 @@ import { IonicModule } from '@ionic/angular';
     `,
   ],
   standalone: true,
-  imports: [IonicModule],
+  imports: [IonicModule, RouterLink],
 })
 export class FooterComponent {}

@@ -24,7 +24,6 @@ import { FooterComponent } from './shared/ui/footer.component';
             <ion-button routerLink="/">Home</ion-button>
             <ion-button routerLink="/about-us">About Us</ion-button>
             <ion-button routerLink="/solutions">Solutions</ion-button>
-            <!-- ... other links -->
             <ion-button fill="solid" color="secondary" routerLink="/contact">
               Contact Us
             </ion-button>
@@ -84,9 +83,9 @@ import { FooterComponent } from './shared/ui/footer.component';
       }
 
       .app-container {
-        max-width: 1200px; // Bruk ønsket maksbredde
-        margin: 0 auto; // Dette vil sentrere innholdet
-        padding: 0 20px; // Liten padding på sidene for å unngå at innholdet klistrer seg til kantene på små skjermer
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
       }
     `,
   ],
