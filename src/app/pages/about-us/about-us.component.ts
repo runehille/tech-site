@@ -47,6 +47,7 @@ import { RouterLink } from '@angular/router';
   styles: [
     `
       .hero {
+        position: relative;
         padding: 50px 0;
         margin-top: 10px;
         text-align: center;
@@ -56,8 +57,24 @@ import { RouterLink } from '@angular/router';
         color: white;
       }
 
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
       .content {
         padding: 50px 0;
+      }
+
+      h1,
+      p {
+        z-index: 1;
+        position: relative;
       }
     `,
   ],

@@ -33,17 +33,27 @@ import { FooterComponent } from './shared/ui/footer.component';
       </ion-header>
 
       <!-- Side Menu (for mobile) -->
-      <ion-menu side="end" contentId="main-content">
+      <ion-menu side="end" contentId="main-content" swipeGesture="false">
         <ion-header>
           <ion-toolbar color="primary">
             <ion-title>Menu</ion-title>
+            <ion-item slot="end" (click)="closeMenu()" color="primary">
+              <ion-icon name="close"></ion-icon>
+            </ion-item>
           </ion-toolbar>
         </ion-header>
         <ion-content>
           <ion-list>
-            <ion-item routerLink="/">Home</ion-item>
-            <ion-item routerLink="/about-us">About Us</ion-item>
-            <ion-item routerLink="/solutions">Solutions</ion-item>
+            <ion-item routerLink="/" (click)="closeMenu()">Home</ion-item>
+            <ion-item routerLink="/about-us" (click)="closeMenu()"
+              >About</ion-item
+            >
+            <ion-item (click)="closeMenu()" routerLink="/solutions"
+              >Solutions</ion-item
+            >
+            <ion-item (click)="closeMenu()" routerLink="/contact"
+              >Contact</ion-item
+            >
           </ion-list>
         </ion-content>
       </ion-menu>
@@ -89,4 +99,9 @@ import { FooterComponent } from './shared/ui/footer.component';
     FooterComponent,
   ],
 })
-export class AppComponent {}
+export class AppComponent {
+  closeMenu() {
+    const menu = document.querySelector('ion-menu');
+    menu!.close();
+  }
+}

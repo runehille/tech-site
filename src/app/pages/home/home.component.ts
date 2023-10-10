@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { RouterLink } from '@angular/router';
 import { FooterComponent } from '../../shared/ui/footer.component';
 
 @Component({
@@ -9,7 +10,9 @@ import { FooterComponent } from '../../shared/ui/footer.component';
       <div class="hero-section">
         <h1>Welcome to HilleTech Solutions</h1>
         <p>Your trusted partner in innovative software solutions</p>
-        <ion-button class="cta-button" color="secondary">Learn More</ion-button>
+        <ion-button color="secondary" routerLink="/solutions"
+          >Learn More</ion-button
+        >
       </div>
       <app-footer></app-footer>
     </ion-content>
@@ -17,6 +20,7 @@ import { FooterComponent } from '../../shared/ui/footer.component';
   styles: [
     `
       .hero-section {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -25,26 +29,34 @@ import { FooterComponent } from '../../shared/ui/footer.component';
         text-align: center;
         background: url('/assets/background-office.png') no-repeat center
           center/cover;
+      }
 
-        h1 {
-          font-size: 2.5rem;
-          margin-bottom: 1rem;
-          color: #fff;
-        }
+      .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
 
-        p {
-          font-size: 1.5rem;
-          margin-bottom: 2rem;
-          color: #fff;
-        }
+      h1 {
+        z-index: 1;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
 
-        .cta-button {
-          opacity: 0.9;
-        }
+      p {
+        z-index: 1;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #fff;
       }
     `,
   ],
   standalone: true,
-  imports: [IonicModule, FooterComponent],
+  imports: [IonicModule, RouterLink, FooterComponent],
 })
 export class HomeComponent {}

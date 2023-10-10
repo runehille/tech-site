@@ -6,31 +6,27 @@ import { IonicModule } from '@ionic/angular';
   template: `
     <ion-footer>
       <ion-toolbar color="primary">
-      <div class="app-container">
-        <ion-row class="ion-align-items-center">
-          <!-- Linke-seksjon -->
+        <ion-row class="ion-padding">
           <ion-col size="6">
             <div class="footer-links">
               <a routerLink="/">Home</a>
-              <a routerLink="/about-us">About Us</a>
+              <a routerLink="/about-us">About</a>
               <a routerLink="/solutions">Solutions</a>
-              <!-- ... andre lenker -->
             </div>
           </ion-col>
 
-          <!-- Sosiale medier ikoner -->
           <ion-col size="6" class="ion-text-right">
+            <a href="https://github.com/runehille"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
             <ion-icon name="logo-facebook"></ion-icon>
             <ion-icon name="logo-twitter"></ion-icon>
             <ion-icon name="logo-linkedin"></ion-icon>
-            <!-- ... andre sosiale medier ikoner -->
           </ion-col>
         </ion-row>
 
-        <!-- Copyright tekst -->
         <div class="copyright">
           © 2023 HilleTech Solutions. All rights reserved.
-        </div>
         </div>
       </ion-toolbar>
     </ion-footer>
@@ -39,25 +35,25 @@ import { IonicModule } from '@ionic/angular';
     `
       .footer-links {
         display: flex;
-        gap: 20px; // Avstand mellom lenkene
+        gap: 15px;
 
         a {
-          color: white; // Endre til ønsket farge
-          text-decoration: none; // Fjerner underlinje
+          color: white;
+          text-decoration: none;
         }
       }
 
       .copyright {
         text-align: center;
         font-size: 0.9rem;
-        color: white; // Endre til ønsket farge
+        color: white;
         margin-top: 10px;
       }
 
       ion-icon {
         font-size: 24px;
         margin-left: 10px;
-        color: white; // Endre til ønsket farge
+        color: white;
       }
     `,
   ],
