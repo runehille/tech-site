@@ -27,7 +27,7 @@ import { IonicModule } from '@ionic/angular';
         </ion-row>
 
         <div class="copyright">
-          © 2023 HilleTech Solutions. All rights reserved.
+          © 2024 Software Company. All rights reserved.
         </div>
       </ion-toolbar>
     </ion-footer>

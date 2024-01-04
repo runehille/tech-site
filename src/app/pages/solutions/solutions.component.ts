@@ -10,7 +10,7 @@ import { FooterComponent } from '../../shared/ui/footer.component';
       <div class="app-container">
         <h2>Our Solutions</h2>
         <p>
-          At HilleTech Solutions, we offer a range of cutting-edge software
+          At Software Company, we offer a range of cutting-edge software
           products and services tailored to your business needs.
         </p>
         <div class="solution-cards">
@@ -96,10 +96,7 @@ import { FooterComponent } from '../../shared/ui/footer.component';
       }
       @media only screen and (min-width: 900px) {
         .solution-cards {
-          grid-template-columns: repeat(
-            2,
-            minmax(350px, 1fr)
-          ); // Dette vil tvinge bare 2 kort i bredden
+          grid-template-columns: repeat(2, minmax(350px, 1fr));
         }
       }
     `,

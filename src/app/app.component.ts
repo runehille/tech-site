@@ -8,18 +8,12 @@ import { FooterComponent } from './shared/ui/footer.component';
   selector: 'app-root',
   template: `
     <ion-app>
-      <!-- NavBar (includes both mobile and desktop navigation) -->
       <ion-header>
         <ion-toolbar fixed color="primary">
-          <!-- Menu Button (visible on mobile) -->
           <ion-buttons slot="end">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
-
-          <!-- Site Title -->
-          <ion-title> HilleTech Solutions </ion-title>
-
-          <!-- Desktop Navigation (visible on desktop) -->
+          <ion-title> Software Company </ion-title>
           <div class="desktop-nav" slot="end">
             <ion-button routerLink="/">Home</ion-button>
             <ion-button routerLink="/about-us">About Us</ion-button>
@@ -31,7 +25,6 @@ import { FooterComponent } from './shared/ui/footer.component';
         </ion-toolbar>
       </ion-header>
 
-      <!-- Side Menu (for mobile) -->
       <ion-menu side="end" contentId="main-content" swipeGesture="false">
         <ion-header>
           <ion-toolbar color="primary">
@@ -57,7 +50,6 @@ import { FooterComponent } from './shared/ui/footer.component';
         </ion-content>
       </ion-menu>
 
-      <!-- Main Content Area -->
       <ion-content>
         <ion-router-outlet id="main-content"></ion-router-outlet>
       </ion-content>
@@ -65,13 +57,11 @@ import { FooterComponent } from './shared/ui/footer.component';
   `,
   styles: [
     `
-      /* Gjemmer desktop-nav (horisontal NavBar) for små skjermer */
       .desktop-nav {
         display: none;
         padding-right: 10px;
       }
 
-      /* Viser desktop-nav og skjuler menyknappen for store skjermer */
       @media (min-width: 800px) {
         .desktop-nav {
           display: flex;

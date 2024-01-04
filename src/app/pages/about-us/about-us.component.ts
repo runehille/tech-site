@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
     <ion-content>
       <div class="app-container">
         <div class="hero">
-          <h1 class="ion-text-center">HilleTech Solutions</h1>
+          <h1 class="ion-text-center">Software Company</h1>
           <p class="ion-text-center">
             We are a software development company that specializes in building
             custom software solutions for our clients.

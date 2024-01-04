@@ -8,7 +8,7 @@ import { FooterComponent } from '../../shared/ui/footer.component';
   template: `
     <ion-content>
       <div class="hero-section">
-        <h1>Welcome to HilleTech Solutions</h1>
+        <h1>Welcome to Software Company</h1>
         <p>Your trusted partner in innovative software solutions</p>
         <ion-button color="secondary" routerLink="/solutions"
           >Learn More</ion-button
